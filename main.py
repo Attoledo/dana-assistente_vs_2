@@ -191,3 +191,5 @@ if st.session_state.mostrar_assistente:
         )
 else:
     st.info("📄 Carregue um PDF, URL de YouTube ou Site para conversar com a DANA.")
+
+
