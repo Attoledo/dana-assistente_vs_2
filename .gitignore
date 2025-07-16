@@ -1,0 +1,22 @@
+# Ignorar o ambiente virtual e suas pastas
+.venv/
+venv/
+bin/
+lib/
+etc/
+share/
+pyvenv.cfg
+CACHEDIR.TAG
+
+# Ignorar arquivos com chaves ou configurações privadas
+.env
+*.env
+
+# Ignorar arquivos temporários e cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar configurações de sistema (macOS, etc)
+.DS_Store

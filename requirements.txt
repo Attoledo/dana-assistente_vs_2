@@ -1,0 +1,14 @@
+streamlit
+langchain
+langchain-community
+langchain-groq
+PyPDF2
+pypdf
+webvtt-py
+yt-dlp
+reportlab
+python-dotenv
+beautifulsoup4
+requests
+reportlab
+
