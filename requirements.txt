@@ -11,4 +11,10 @@ python-dotenv
 beautifulsoup4
 requests
 reportlab
+streamlit
+youtube-transcript-api
+
+
+
+
 

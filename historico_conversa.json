@@ -1,0 +1,6 @@
+[
+  {
+    "pergunta": "Qual o conteúdo deste video ",
+    "resposta": "Olá Alessandro!\n\nO conteúdo deste vídeo é sobre o modelo de texto-para-voz chamado Cocoro Texto Speeach, que é um modelo de código aberto e gratuito para gerar vozes sintéticas. O modelo é destacado por sua qualidade e capacidade de gerar vozes em diferentes línguas e estilos.\n\nNo vídeo, o apresentador demonstra como utilizar o modelo para gerar áudios em Python, utilizando bibliotecas como UV, Sound File e Numpie. Ele também mostra como instalar e configurar o modelo, além de como utilizá-lo para gerar áudios em tempo real.\n\nAlém disso, o vídeo apresenta uma seção adicional sobre o Cocoro Fest API, que é uma API que permite ao usuário criar seu próprio serviço de inferência de geração de voz com o modelo Cocoro. Isso permite que os desenvolvedores criem aplicativos que utilizam a geração de voz sintética de forma mais eficiente e escalável.\n\nEm resumo, o vídeo é uma tutorial prático sobre como utilizar o modelo Cocoro Texto Speeach para gerar vozes sintéticas em Python e como criar um serviço de inferência de geração de voz com o Cocoro Fest API."
+  }
+]
