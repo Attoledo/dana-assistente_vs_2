@@ -198,7 +198,7 @@ Você representa a excelência da DNA Agência. Responda sempre com foco em agre
         st.session_state.chat = []
 
     if 'nome_usuario' not in st.session_state:
-        nome = st.text_input("Olá, qual é o seu nome?", placeholder="Ex: Roberto")
+        nome = st.text_input("Olá, me chamo Dana. Qual é o seu nome?", placeholder="Ex: Roberto")
         if nome:
             st.session_state.nome_usuario = nome
             st.rerun()

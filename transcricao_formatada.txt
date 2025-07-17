@@ -1,293 +1,583 @@
-Vocês não precisam mais pagar por geradores de vozes pessoal, porque agora podem gerar vozes como a minha, a de Papai Noel, e de graça no próprio computador.
+Santos, cara, porque naturalmente ele jogando bem no Santos, cara, ele vai ser o 10 da seleção, mas ele tem que jogar bem no Santos.
 
-O que vocês acabaram de ouvir é um áudio gerado por um modelo de ar que tá chamando muita atenção no mercado que rodou inteiramente aqui da minha máquina.
+E chegou rasgando por ali, jogou essa bola pela linha lateral, Barreal.
 
-O nome dele é Cocoro Texto Speitch e ele foi publicado há poucos meses atrás, mas já aparece como top um aqui na categoria modelos de tex to speech do Hugin Face.
+Aí no detalhe, o camisa 22 e o Felipe pedindo uma mudança, especialmente na hora de dar passes, né, do lado da equipe do Flamengo.
 
-E ele chamou atenção por dois motivos.
+A ideia de cortar caminhos, né, não sair de um zagueiro pro Danilo para chegar no lateral.
 
-Em primeiro lugar, ele é um modelo muito bom.
+Não precisa a bola chegar no Danilo.
 
-Então, esse aqui é um ranking que avalia diferentes tipos de modelos de geração de de áudio, de voz com IA.
+Foi o que ele falou.
 
-São os chamados TTS, Tex to speitch.
+Não quero aqui, aqui quero aqui.
 
-E reparem que o cocoro ele aparece aqui em oitavo colocado, só que todos os outros modelos que estão anteriormente são modelos proprietários fechados, que a gente não tem acesso ao código fonte.
+Arrascaeta caiu.
 
-Então ele é o melhor modelo gratuito do mundo no momento.
+Arbitragem manda o jogo correr.
 
-Mas a parte mais legal dele tá aqui, ó.
+Luís Araújo.
 
-Ele é um modelo pequeno, ele tem apenas, entre aspas, né, 82 milhões de parâmetros.
+Flamengo tenta chegar no meio.
 
-E caso vocês não tenham familiaridade, isso aqui é considerado pouco, tá?
+Tem espaço o camisa sete tocou, passou Bruno Henrique recebeu de volta.
 
-Tão pouco que eu consigo rodar o modelo no meu próprio MacBook sem nenhum problema.
+Essa bola sobrou.
 
-Se eu colocasse isso aqui numa GPU, então ele ia voar.
+Domina por ali o Wesley, invade a área mais atrás se movimentou o Jorginho.
 
-E o modelo também foi treinado para gerar vozes em diferentes línguas.
+Prefere recomeçar.
 
-Então, a gente tem a inglês americano, inglês britânico, japonês, mandarim, espanhol, português aqui embaixo.
+Aí o Danilo agora lá do lado esquerdo vem o Rubro Negro.
 
-E a gente também tem acesso a diferentes vozes.
+Mas o que a gente falava, né, André?
 
-Então, por exemplo, esse áudio que foi gerado aqui são os do português brasileiro com a voz do Santa Claus, do Papai Noel, tá?
+A maturidade o time do Flamengo chegou dentro da área, quase, quase fez a finalização, mas toca, toca a bola.
 
-Mas a gente também tem vozes femininas como essa.
+Vamos abrir.
 
-Oi, eu sou a Dora e esta é minha voz ou Alex.
+Balança um time para um lado, balança um time pro outro.
 
-Oi, eu sou o Alex e esta é minha voz.
+Ó, dá uma amplitude boa no campo, abre o campo, faz o time do Santos correr e troca passes.
 
-E Oi, eu sou o Alex e esta é minha voz.
+Tá com ela por aqui o Léo Ortiz.
 
-E nesse vídeo aqui eu vou ensinar vocês a como utilizar o modelo na própria máquina e também instalar essa outra aplicação aqui, o Cocoro Fest API, onde a gente consegue colocar o modelo dentro de um docum servidor qualquer no mundo para ter acesso ao nosso próprio serviço de inferência de geração de voz.
+Agora ele adiantou demais.
 
-Então bora lá.
+Aí teve que rasgar, né?
 
-Então vou começar aqui com um projeto vazio e eu quero que vocês já instalem o UV, que é um gerenciador de pacotes do Python que tá muito popular ultimamente.
+Na hora que essa bola bateu no pé dele, ela acabou espirrando.
 
-Eu já tenho ele instalado, não vou rodar.
+Aí ele teve que mandar pra frente.
 
-E aí, após isso, a gente vai dar um I UV init para ele criar aqui alguns arquivos básicos.
+João Basso começa com Gabriel Brazão.
 
-Vou apagar esse main.file.
+Domina por aqui, tá com ela Luan Perez.
 
-Depois eu vou instalar algumas bibliotecas.
+Lá na esquerda tem o Souza.
 
-Então eu quero colocar o cocoro, Sound File, Open AI e o Numpie.
+Agora sobe essa marcação aqui a equipe do Felipe Luiz.
 
-O UV.
+Neymar foi bem agora o Jorginho na recuperação.
 
-Faço isso tudo muito rapidamente.
+Flamengo chega.
 
-E eu vou começar com um projeto bem básico, aonde eu vou passar uma string de texto, ele vai gerar um arquivinho de áudio para eu rodar aqui na minha máquina.
+Bom passe, recebe Arrascaeta, vai para cima, dá o passe, Plata Palma, Gabriel Brazão, 50.
 
-Vou chamar aqui de cocoro Basic.
+O Flamengo chegou com rapidez.
 
-Então a gente vai começar importando três das bibliotecas que a gente instalou.
+Que tapa do Arrascaeta, hein?
 
-Então, from cocoro eu importo k pipeline, que é uma pipeline para geração de áudio, o sound file para poder gerar os arquivos de áudio pra gente e o numpalhar com esses dados internamente para converter do que o cocoro gerar aqui para esse arquivo de áudio.
+Devolveu pro camisa 50, o Plata chegou, nem dominou, bateu de canhota, o Gabriel Brazão foi buscar com a mão trocada e tinha, fez a parte bem porque a bola tinha endereço.
 
-Primeira coisa, eu vou colocar qual que é a língua que nós vamos utilizar.
+Bateu bem na bola o Plata.
 
-Eu vou deixar para vocês aqui um pequena pequeno exemplo com outras línguas que vocês poderiam usar.
+Mais uma vez o Brasão, que é bom goleiro Brasão, hein?
 
-aqui da própria documentação do cocouro que vocês poderiam encontrar aqui vindo no cocouro, clicar em GitHub, está aqui.
+Plata faz o cruzamento e de fato é muito bom goleiro Gabriel Brasão.
 
-Eu, no caso, como eu vou gerar áudios em português, eu coloquei aqui o P, mas se quisesse gerar em inglês, A de American, F de francês e assim por diante.
+O Santos estava com algumas dificuldades depois da lesão, especialmente da lesão, até um pouco antes, né, da lesão jogada.
 
-E eu vou criar uma instância dessa classe que a gente puxou, que é o pipeline.
+A bola um pouco mais no meio.
 
-Vai ser igual K pipeline com esse language code aqui, tá?
+Alan aparecendo aqui o Léo Ortiz tentou um passe ali de trivela, não deu certo.
 
-É isso que a gente vai utilizar para fazer as transcrições.
+O Santos retoma, então acelera o Barreal.
 
-Vou colocar o meu texto aqui, Papai Noel, tá?
+Tá se movimentando o Zé Rafael.
 
-Vocês podem colocar o texto que vocês quiserem gerar.
+A bola foi nas costas e o Guilherme conseguiu ainda fazer o movimento.
 
-E aqui eu vou rodar esse nosso pipeline, passando o nosso texto como parâmetro e escolhendo uma das vozes.
+O Santos vem no contra-ataque.
 
-Para acessar as vozes, vocês podem vir nesse link aqui da própria documentação do Cocoro Norgin Face, vi aqui embaixo, clicar em voices, vai abrir essa página aqui e a gente tem vários exemplos.
+Neymar recebeu, limpou a marcação, invadiu a área, passou pela marcação.
 
-Eu vou pegar, começar aqui com a do Santa Claus, que seria o nosso PM Santa.
+Neymar jogou no meio, veio o cruzamento, chegou rasgando no último instante o Alan, ele esperou até o último instante para dar o passe e tentava já o Guilherme, chegou o defensor rubro negro e salvou.
 
-Isso aqui, galera, é um gerador, tá, do Python.
+É, André, mas é isso que o Santos precisa fazer, precisa usar o Neymar aí, né?
 
-Então, a gente precisa iterar esse cara para ele ir gerando esses trechos de códigos um a um.
+O Neymar não precisa marcar, cara.
 
-Que que acontece?
+O Santos tem oito, sete, oito jogadores para marcar.
 
-O cocoro ele vai rodar linha a linha de maneira separada.
+Deixa o Neymar lá.
 
-Então ele vai quebrar isso aqui, tá?
+Bruno Henrique, chega o Flamengo na resposta.
 
-Vai rodar essa linha em primeiro.
+Arrascaeta.
 
-Quando ele encontrar uma quebra de linha, ele gera a segunda para que a gente consiga processando os textos mais rapidamente.
+Essa bola sobrou.
 
-Mas eu vou pedir para ele processar tudo e todo esse arquivo final eu vou colocar dentro de um arquivo de áudio e salvar.
+Jorginho pode bater.
 
-Como que a gente faz isso?
+O Luís Araújo ajeitou, bateu de perna direita.
 
-Muito simples.
+Essa bola explodiu no Zé Rafael e o Gabriel Brazão evita a saída e manda pra frente.
 
-Vou criar uma uma lista chamado audio chunks vazia e eu vou colocando os nossos dados aqui dentro.
+Um time cria, o outro responde na hora.
 
-E para cada vez que eu for iterar sobre esse gerador aqui, ele vai me devolver três elementos.
+O jogo é bom.
 
-A gente não precisa se preocupar com os dois primeiros, que são informações sobre o áudio, mas o áudio em si, os valores da do áudio gerado, tá nesse terceiro que ele vai gerar um GS, um PS e um áudio.
+É, o jogo vai tomar lá da O jogo é bom.
 
-Então, para cada um desses em generator, eu quero vir aqui no audio chunks e dar uma pendu áudio.
+É, o jogo vai tomar lá da cá.
 
-Simples assim.
+Mas ó, olha, olha onde que o Neymar pega a bola.
 
-Por fim, eu vou pegar o meu áudio completo e concatenar, juntar todos eles e utilizar a biblioteca Sound File para poder criar esse arquivo de áudio completo e utilizar esse conjunto de dados aqui para rodar.
+Quer ver?
 
-Vamos ver isso na prática funcionando.
+Ó como um ponto, hein?
 
-Então, a gente viria aqui embaixo, daria UV run cocoro basic.
+Ó, ele pega, ele pega a bola nos últimos 30 m.
 
-Ele está processando já.
+Daí ele vai para dentro e daí no mano a mano, cara, ele é muito rápido, ele é inteligente, ele continua sendo o Neymar e ele fez a jogada certa, tocou para trás, ele não tem que correr atrás dos caras, ele não tem que se se e olha ó de novo, ó.
 
-Aqui faltou o sample rates da do sound file, que é o parâmetro aqui embaixo da taxa de amostragem na hora de geração de dados.
+Ó o Neymar mais uma vez tem recuperação do P.
 
-A gente pode utilizar 24.000.
+Ele deu o passe David Washington bate cruzado, espalma Ross errado.
 
-Vou rodar de novo.
+O Santos tava ali atento, né?
 
-A primeira vez que vocês rodam leva um tempinho porque ele tem que baixar os modelos pra máquina local, para esse repositório aqui.
+O David Washington tava ali só esperando o vacilo.
 
-Eita lá, gerou o meu áudio completo.
+Ele veio, o Neymar deu o passe, ele finalizou.
 
-Vamos ouvir.
+Mineirão.
 
-Vocês não precisam mais pagar por geradores de vozes pessoal, porque agora podem gerar vozes como a minha, a de Papai Noel.
+É o Ortiz de trivela domina no peito.
 
-Funcionou.
+Bonita a jogada do Arrasqueta.
 
-E galera, a gente decidiu também criar um repositório aqui no GitHub para vocês, contendo todo um guia mais completo com o projeto que eu apresentei aqui.
+Falta em cima do Luiz Araújo.
 
-Mais um exemplo de como poder fazer o streaming em tempo real do áudio, ao invés de salvar isso no arquivo ponovoov, seria nesse segundo arquivo aqui, tá?
+Era o Varela, né?
 
-E eu vou deixar o link desse repositório também na descrição desse vídeo para vocês clicarem e darem uma olhadinha, caso precisem de mais, tenham mais alguma dúvida.
+Em cima do Varela.
 
-Próximo exemplo, eu vou mostrar para vocês agora como é que a gente roda o cocoro fasts.
+E tem cartão amarelo para o jogador do Santos também.
 
-Que que seria isso?
+O Basso tá ali reclamando com a arbitragem, ó.
 
-Os caras desenvolveram um projeto aonde eles colocaram esse modelo dentro de uma de um Docker, tá?
+Tapa de três dedos do Léo Ortiz.
 
-E esse Docker vocês podem colocar em qualquer servidor do mundo, inclusive máquinas que de repente tenham acesso à GPU para montar o teu próprio serviço de inferência e de geração de áudio com o cocoro.
+do domínio de peito.
 
-Então isso é muito útil caso vocês de repente ten um computador ruim ou queiram construir um sistema mais robusto, tá?
+Tem a chance por aqui o Flamengo.
 
-Para poder fazer essas inferências em tempo real, não querem mais gastar com geradores de áudio como Labs ou da Open AI.
+Olha o Plata lá sozinho no segundo pau.
 
-E qual que é a grande vantagem?
+Cruzamento.
 
-Eles colocaram não só dentro de um Docker, mas também dentro de uma de uma de uma API, defesta API, e mimetizaram a forma como a própria Open AI faz para gerar o seu áudio.
+Luiz Araújo no meio da área.
 
-Então, quem de repente já tá trabalhando gerando áudios com a Open AI e quiser trocar para essa nova instância, o processo é bem simples, ó.
+Cabeçada espalma Gabriel Brazão.
 
-Basta instanciar aqui a Open AI, colocar o servidor que vocês estão utilizando e rodar alguma coisa.
+E uma belíssima cabeçada do Danilo no lance.
 
-Eu vou copiar esse trecho de código aqui.
+Vem o Arrascaeta pra cobrança.
 
-Vamos criar uma um novo aqui chamado cocoro festa api.p.
+[Aplausos] Atento ali o camisa 10.
 
-E eu vou querer agora subir em um outro servidor, numa máquina que eu já tenho.
+Cruzamento, ela passa por todo mundo.
 
-Como vocês sabem, a gente tem uma máquina específica aqui na Zimov para rodar modelos de linguagem que tem acesso a uma 3090, mas vocês poderiam de repente alugar computadores, servidores no Google Cloud, on serviço de locação de de servidores com placas de vídeo para poder criar o teu próprio servidor que tenha uma capacidade de inferência mais rápida.
+Luan Perez afastou, tirou o perigo.
 
-O processo vai ser o mesmo.
+O Santos agora tenta sair.
 
-Então, no meu caso, eu vou entrar lá no nosso servidor, tá?
+Neymar conseguiu dar o passe, então Peixei vem no contra-ataque.
 
-E o processo via o Cocoro Fest API também é muito simples.
+Guilherme parou, prendeu, perdeu a bola.
 
-Eu recomendo que vocês cliquem aqui nesse primeiro, ó, quick start.
+Ele tava sozinho de fato, ele não conseguiu dominar da melhor maneira para levar ela pra frente, mas aí no que ele voltou uma vez, voltou na segunda e perdeu a bola, aí o torcedor ficou maluco.
 
-E ele tem um passo a passo bem rápido aqui, tá?
+É, mas é aquela deu uma blitz ali, né?
 
-De simplesmente ou vocês podem rodar isso aqui, caso estejam rodando numa máquina que tem acesso à CPU, ou esse esse segundo, caso vocês tenham uma alguma GPU da Nvidia, tá?
+Tinha quatro, cinco jogadores do Flamengo chegando.
 
-Então, no meu caso, eu tenho, tá?
+A recomposição do Flamengo muito boa, né?
 
-Eu vou simplesmente vir aqui e rodar isso com sudo.
+Voltou rápido, mas é aquele lance, né, André?
 
-Essa minha máquina aqui é um Ubunto server 24.04.
+já não tem o que fazer, não dá para ir pra frente, segura a bola, espera o cara vir, dá um encontrão, sofre a falta, evita o contra-ataque, a defesa respira, o time sai lá de trás, mantém a posse, né?
 
-Ao rodar, ele pede meu password porque eu tô usando um sudo.
+É essa maturidade aí de querer fazer as coisas afobada.
 
-Ele vai aparecer, vai mostrar para vocês aqui qual que é a porta que ele tá hospedando isso, tá?
+Pois, a bola foi muito forte e aqui o árbitro acho que vai acabar o jogo.
 
-Então vai demorar um pouquinho, primeira vez vai demorar mais, vai baixar os modelos, tá?
+E essa foi a última chance do primeiro tempo no momento em que o árbitro apita.
 
-E ele gerou, tá?
+É fim da primeira etapa no Urbano Caldeira, na Vila Belmiro.
 
-Ele me disse que ele subiu, primeiro lugar uma espécie de front end nessa localização aqui, tá?
+Aí você vê o o Bruno Henrique já tá ali no centro, só esperando a autorização da arbitragem.
 
-que eu vou ter que trocar só o IP pro IP da máquina.
+Autoriza o árbitro.
 
-Ó, reparem que ele dá bem bonitinho aqui essa interface, onde eu posso sair gerando o áudio por aqui.
+Começa a segunda etapa de zero para o Santos, zero para o Flamengo.
 
-Isso aqui não tá rodando na minha máquina e sim nesse outro servidor, tá?
+Primeiro tempo agitado.
 
-Posso vir aqui escolher vozes diferentes, posso aumentar a velocidade da fala.
+Vamos torcer para que o segundo tempo seja também e de preferência com bola na rede.
 
-Então, por exemplo, reparem isso, ó.
+Aí o Danilo faz o lançamento, subiu de cabeça, tirou dali o Luan Perez.
 
-Vamos botar aqui o geral, por exemplo.
+Tomás Rincon põe a bola no chão.
 
-Posso aumentar a velocidade de geração da da dela.
+Souza briga por ali, caiu duas vezes na segunda.
 
-E a parte mais interessante é que a gente também pode mesclar vozes diferentes.
+O Plata acabou empurrando o equatoriano.
 
-Então vamos colocar aqui o aloi.
+A arbitragem aqui a primeira nem tanto.
 
-Vamos botar misturado com a Bela com 0.5.
+Agora nessa segunda aí ele empurrou mesmo.
 
-Ele vai fazer um blend duas vozes, gerar uma voz intermediária pra gente.
+Falta.
 
-Então uma forma super útil da gente tá gerando de repente novas vozes.
+É.
 
-Agora eu vou tirar, por exemplo, a loia.
+E deu um pisãozinho ali.
 
-Vamos botar a Bela 100%.
+Foi meio podia ter evitado aí, né?
 
-Então, reparem que ele pegou uma voz mais grossa, uma mais fina e ficou uma coisa intermediária, tá?
+O plata esse pisão aí na cabeça do Souza, o equatoriano com a camisa C.
 
-Isso é uma uma forma que a cocoro deixa a gente fazer.
+Brazão vai pressionar ali o Bruno Henrique.
 
-Isso aqui também é possível dentro da própria API no Python.
+Lan Perez tocou por último ali o Bruno Henrique.
 
-Essa interface aqui é muito legal, dá para baixar os áudios por aqui também, mas não é nisso que eu tô interessado.
+Essa bola bateu no Lamperz.
 
-E sim nesse nesse serviço aqui, onde eu posso acessar o nosso sistema através do Python.
+Tem lateral Flamengo.
 
-Então, reparem que aqui ele até colocou, ó, single ou multiple voice voice pack combo.
+Então Léo Pereira entra com a qu e o Léo Ortiz deixa o campo com a trinc.
 
-Ele tá misturando a voz da Sky com a Bela.
+Aí o Neymar tem espaço.
 
-Colocou um Hello World.
+O camisa 10 buscou acionar por ali o companheiro Wesley fez o domínio.
 
-Vamos rodar isso aqui e ver se funciona.
+Conseguiu evitar agora o Alan.
 
-E a diferença é que aqui eu vou ter que colocar o IP da máquina que eu estou rodando, ó.
+Essa bola saiu de Washington aberto lá na direita o Basso com ela Barreal agora busca trabalhar nesse começo de segundo tempo com a bola no pé.
 
-Então, se vocês esverem rodando uma máquina da da WS, do Google Cloud, troquem aqui pelo IP externo de lá e garanter tá up.
+Briga por ali o Tomás Rincon perdeu a bola.
 
-Vamos de novo dar um new run cocuro.
+Então o Flamengo sai jogando.
 
-Agora festa API.
+Luiz Araújo faz o domínio.
 
-Vamos rodar.
+Aí o Plata recebe o equatoriano.
 
-Ele vai gerar aqui.
+Deu o passe, recebeu de volta.
 
-Ele vai falar inclusive.
+Plata de pé em pé.
 
-Não, não falou.
+Chega o Flamengo, se movimenta o equatoriano, tentou a jogada pelo lado esquerdo, chega rasgando a marcação santista ali.
 
-Ele salvou um arquivo em output.
+Atento o Barreal, Léo Pereira.
 
-Vamos ver.
+Falta falta do David Washington em cima dele.
 
-Hello world.
+Parecia um lance, parecia um lance tranquilo, né?
 
-Então, foi só um hello world, só que rodou na minha máquina.
+De repente, na hora que a imagem voltou, o Léo Pereira tava correndo atrás da bola, passando sufoco ali.
 
-Então é isso.
+É, Danilo, o Wesley tá passando, o Bruno Henrique.
 
-Isso aqui é mais uma alternativa para vocês construírem agora.
+Hum.
 
-aplicações que com gerando vozes, super útil para trabalhar com de repente assistente por voz ou qualquer outro projeto que vocês queiram embutir em algo que já existe no Python ou mesmo conectar com alguma LLM da voz a modelo de linguagem.
+Agora o passe do Wesley quebrou a movimentação do BH.
 
-Espero que tenham gostado dos vídeos.
+Alan, Flamengo atravessa do outro lado.
 
-Qualquer dúvida, deixe nos comentários.
+Tá com ela ali o Varela.
 
-Materiais e links aqui na descrição.
+Z Araújo, Varela de novo.
+
+Apontou por ali o Jorginho.
+
+A bola chegou no Léo Pereira.
+
+Segue com aquela tranquilidade o Flamengo para construir as suas jogadas.
+
+Jorginho, que passe espetacular pro Var para bateu plata.
+
+Pega Brazão.
+
+Do Flamengo era o Arrascaeta do lance.
+
+Que bola do Uruguaio.
+
+Por muito pouco o Flamengo não fitando mais uma boa chance do Rubro Negro.
+
+Bateu ali, né?
+
+Trombou na massa.
+
+O Alan acabou caindo.
+
+Subiu de cabeça o Luan Perez.
+
+Plata bate de primeira.
+
+Essa bola explodiu no Luan Perez que tava caído.
+
+Pediu toque de mão equatoriano.
+
+Nada segundo a arbitragem ficou sentindo agora ali o Bruno Henrique.
+
+O Souza aí.
+
+É, o Souza foi no mesmo barbeiro do Neymar, hein?
+
+Você viu?
+
+fizeram aí aí o Leo Ortiz no banco ali.
+
+É, mas o Souza fez o acho que o Neymar falou: "Ó, vem comigo, eu te eu faço essa para você enquanto a gente vê o toque do Arrascaeta ali, cara.
+
+É, é aquele para falar, né, na na gíria do futebol, aquele toque nojento." Exatamente.
+
+Bola ele faz o negócio parecer fácil, né, André?
+
+Ele dá o toque de calcar, deixa o plata na cara do gol e mais uma vez o Brasão salva o Santos.
+
+Teve a chance por muito pouco.
+
+O Flamengo não sai na frente logo nesse começo de segunda etapa pro lateral Souza.
+
+Aí o Neymar.
+
+Hum.
+
+Agora o Neymar tentou um passe de letra, acabou furando.
+
+Luiz Araújo recebe o Arrascaeta, tem espaço na direita, Plata para cima da marcação, é ele contra o Souza, busca o Acional Arrascaeta ali, o equatoriano não deu certo.
+
+Aí tem dificuldades para sair jogando o Santos.
+
+Coloca o corpo na frente.
+
+Wesley, Jorginho até com o corta-luz do árbitro.
+
+Pereira, que passe boa bola.
+
+Plata tem espaço.
+
+Ele deu o passe pro Arrascaeta.
+
+O Flamengo tenta chegar.
+
+O Cebolinha buscou o domínio, não conseguiu.
+
+Varela, o Rubro Negro chega novamente.
+
+Dela Cruz recebe de volta.
+
+A movimentação mais uma vez.
+
+O camisa 18 tá pedindo Varela.
+
+A bola chega para ele.
+
+Sempre dominando com essa perna direita.
+
+De la Cruz buscou o cruzamento.
+
+Tomás Rincon atento e o Santos sai no contra-ataque, recebe Neymar, vai para cima da marcação agora.
+
+Wesley chegou, ele trouxe, deu o passe, clareou, David Washington bate, Ross fica com ela, chutou nas pernas do zagueirão rubro negro.
+
+Recuperação, recomposição do Flamengo foi boa também, né?
+
+Importante agora busca chegar ao ataque o Rubro Negro.
+
+Plata domina por ali, tá com ela o Bruno Henrique.
+
+Plata novamente lá do lado direito, chega rasgando, tocando nela.
+
+Essa bola bateu por último no jogador do Flamengo.
+
+Então lateral é santista.
+
+Mas André, nessa última jogada do ataque do Santos, o David Washington fez o que eu falei na outra jogada.
+
+Uhum.
+
+Tocou a bola pro Neymar e foi pra área e a bola chegou, cara.
+
+Ó, chegou ele daí tomou a decisão errada, bateu o Neymar reclamando ali atrás para para ajeitar a bola para ele, ó.
+
+Mas é isso que tem que fazer.
+
+Tem que tocar a bola do Neymar e deixar o Neymar criar, deixar o Neymar preocupar a zaga do Flamengo, né?
+
+O o o jogador do Flamengo, cara, quando a bola chega que foi foi retirado, foi substituído por esse cara aí, ó, pelo Felipe Luiz, o bom tempo vai entrar aí, o Jaméli é o cara que eu queria.
+
+Eu gosto do futebol do Bom Tempo.
+
+É um menino que tem dinâmica, mobilidade, ele ele consegue jogar pela pela beirada, consegue jogar de segundo volante, consegue jogar de meia, é um cara que chega na área, um cara que sabe fazer gol.
+
+Então era uma boa.
+
+E enquanto a gente vê a galera do Santos aquecendo aí, porque 19º em Santos, a galera já tá de de na minha época falava abrigo.
+
+É, já tá com Isso.
+
+É coisa de velho falar abrigo, jaqueta, abrigo, pulover, pulover.
+
+de casaco, casalho.
+
+É, mas 19º em Santo, verdade, temperatura mais baixinha.
+
+Léo Pereira e Dela Cruz, vou falar para você nessa posição que tá o Léo Pereira aqui, ó, ele está convicto que é ele que vai cobrar essa falta.
+
+Se fosse para escolher, eu acho que quem vai pra cobrança é o Dea Cruz, viu?
+
+É, é aquele negócio, zagueirão vai aí, tem que tá com muita moral com a galera, né?
+
+É, já foi pra área já, o Léo Pereira.
+
+Vai o Dela Cruz.
+
+Tem três jogadores na barreira aqui.
+
+O Santos, o Neymar, o Diego Pituca e o Guilherme.
+
+Autorizado.
+
+Dela Cruz mandou direto.
+
+Espalma Gabriel Brazão.
+
+Finalização não foi tão forte assim, foi no centro do gol, mas ele nem preferiu fazer a defesa e eh encaixar, né?
+
+Preferiu espalmar.
+
+Aí na sequência o Arrascaeta cometeu uma falta em cima do Neymar e leva cartão amarelo.
+
+E ó, o Neymar pegando a bola, né?
+
+Pouquíssimo, pouquíssimo.
+
+com a camisa 49.
+
+O atleta do peixe.
+
+Neymar tocou por último nela ali.
+
+O Plata foi bem agora na roubada de bola e depois ela pegou no pico do da chuteira do Neymar e acabou saindo.
+
+Mar, suas tranças.
+
+Já comentamos.
+
+É.
+
+E uma mudança um pouco rara aí, né, do do Cléber Xavier.
+
+Saiu David Washington pra entrada do Gabriel.
+
+Tempo.
+
+Subiu de cabeça, afastou o perigo por ali o Danilo.
+
+Põe a bola no chão.
+
+Neymar bonito domínio.
+
+Faz o lançamento lá na esquerda pro Guilherme.
+
+Domina aqui o camisa 11.
+
+Se movimentou Gabriel.
+
+Bom tempo.
+
+Recebe o Guilherme, traz pra perna direita, levanta, sai de soco Rossi.
+
+A bola sobrou, Neymar bateu, espalma Rossi [Música] ajeitando pro chute.
+
+Bateu de perna direita, mas ele tava de olho.
+
+Espalmou a primeira.
+
+Socou a primeira, espalmou a segunda, o goleiro.
+
+Ah, mas era tudo que a galera do Santos queria, hein?
+
+Um gol do Neymar.
+
+Neymar cobrando escanteio.
+
+Subiu Plata.
+
+Falta.
+
+Falta no meio da área.
+
+A arbitragem viu falta do João Basso.
+
+Ficou sentindo.
+
+Acho que o Neymar atingiu de fato.
+
+Tanto que ele foi até ali ver se o jogador do Flamengo tá bem.
+
+O Wesley contra dois.
+
+Chega só na bola o Souza.
+
+Excelente corte agora do defensor santista.
+
+Robinho ganhou, passou pela marcação.
+
+Robinho Júnior vai brigando por ali aos Trancos e Barrancos.
+
+Deu o passe, Neymar recebeu, tá pedindo do outro lado Gabriel bom tempo.
+
+Wesley subiu de cabeça, ela sobrou.
+
+Guilherme dominou, se atrapalhou e não conseguiu finalizar.
+
+Ele não sabia que tinha gente atrás dele.
+
+Ele tentou domínio, né, Jamé?
+
+Ah, mas ele podia pegar de primeira, cara.
+
+É aquela bola que ou ele ia jogar lá no canal um.
+
+Ou ele ia fazer o gol do ano, ou ele poderia botar, poderia bater na parede da Santa Casa de Santos ali, mas ele tinha que chutar, cara.
+
+Que ele é como você falou, ele não sabia que tinha alguém por trás.
+
+Lá vem ele de novo, ó.
+
+E lá vem Guilherme do lado esquerdo, avança, invade a área, faz o cruzamento rasteiro.
+
+Neymar dominou, ajeitou, passou da marcação.
+
+Neymar, gol!
+
+[Música] Neymar Júnior é do Santos.
+
+Abrindo o placar na Vila Belmiro.
+
+No contra-ataque que começou do lado esquerdo.
+
+O Guilherme avançou e tinha muito tempo, tinha muito espaço para correr.
+
+Achou o Neymar no meio da área, ele dominou, girou com toda calma, com toda a tranquilidade do mundo, recebeu.
+
+Tinham dois defensores na frente, não tem problema.
+
+Eu passo por um, passo por dois e bato na saída.
+
+Sem chances para o Ross na jogada do Guilherme do lado esquerdo, no domínio do Neymar no meio da área, ele bate de perna direita e joga a bola no fundo da Passa por todo mundo.
+
+Robinho Júnior afasta novamente com ela.
+
+O Cebolinha trouxe pra perna direita, levantou travado pelo Souza, depois na sequência tirou ali o Tomás.
+
+Segue o o o Santos na defensiva, o Flamengo segue no ataque.
+
+Bola do lado direito, Léo Pereira pro Dela Cruz na direita com Wesley, olhou pra áre
