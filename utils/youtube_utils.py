@@ -140,19 +140,105 @@
 #             st.warning(f"⚠️ Legenda automática não disponível: {e}")
 #             return ""
 
+
+#VERSAO V2
+# import streamlit as st
+# import os, re
+# from difflib import SequenceMatcher
+#
+# # Versão cloud usa youtube_transcript_api (sem yt-dlp)
+# try:
+#     from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled, NoTranscriptFound
+#     TRANSCRIPT_API_OK = True
+# except ImportError:
+#     TRANSCRIPT_API_OK = False
+#
+#
+# def processar_legenda_sem_repeticoes(trechos):
+#     texto_limpo, ultimo_trecho = [], ""
+#     for trecho in trechos:
+#         texto = re.sub(r'\s+', ' ', trecho.strip())
+#         palavras_prev, palavras_curr = ultimo_trecho.split(), texto.split()
+#         for n in range(min(len(palavras_prev), len(palavras_curr), 10), 0, -1):
+#             if palavras_prev[-n:] == palavras_curr[:n]:
+#                 texto = " ".join(palavras_curr[n:]).strip()
+#                 break
+#         if not texto or SequenceMatcher(None, ultimo_trecho, texto).ratio() > 0.9:
+#             continue
+#         texto_limpo.append(texto)
+#         ultimo_trecho = texto
+#     return "\n\n".join(re.split(r'(?<=[.!?]) +', " ".join(texto_limpo).strip()))[:15000]
+#
+#
+# def extrair_id_video(url):
+#     import re
+#     match = re.search(r"(?:v=|youtu\.be/)([\w-]+)", url)
+#     return match.group(1) if match else None
+#
+#
+# def processar_youtube():
+#     st.subheader("🎥 Processador de Vídeo YouTube")
+#     url = st.text_input("Cole a URL do vídeo do YouTube:")
+#     if not url:
+#         return ""
+#
+#     ambiente = st.secrets.get("ambiente", "local")
+#     video_id = extrair_id_video(url)
+#
+#     if ambiente == "cloud" and TRANSCRIPT_API_OK:
+#         try:
+#             transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=['pt', 'en'])
+#             trechos = [t['text'] for t in transcript]
+#             texto = processar_legenda_sem_repeticoes(trechos)
+#             return texto
+#         except (TranscriptsDisabled, NoTranscriptFound):
+#             st.warning("⚠️ Legenda automática não disponível para este vídeo.")
+#         except Exception as e:
+#             st.error(f"❌ Erro ao buscar legenda com API: {e}")
+#         return ""
+#
+#     else:
+#         try:
+#             import subprocess, webvtt
+#
+#             # Limpa arquivos .vtt
+#             for f in os.listdir():
+#                 if f.endswith(".vtt"):
+#                     os.remove(f)
+#
+#             # Baixa legenda automática
+#             subprocess.run(
+#                 f'yt-dlp --write-auto-sub --sub-lang "pt" --skip-download --output "legenda.%(ext)s" "{url}"',
+#                 shell=True,
+#                 check=True
+#             )
+#
+#             vtt_file = next((f for f in os.listdir() if f.endswith(".vtt")), None)
+#             if not vtt_file:
+#                 st.warning("⚠️ Legenda automática não encontrada.")
+#                 return ""
+#
+#             trechos = [cap.text.strip() for cap in webvtt.read(vtt_file)]
+#             texto = processar_legenda_sem_repeticoes(trechos)
+#             os.remove(vtt_file)
+#             return texto
+#
+#         except subprocess.CalledProcessError as e:
+#             st.error(f"❌ yt-dlp falhou: {e}")
+#         except Exception as e:
+#             st.error(f"❌ Erro inesperado: {e}")
+#         return ""
+
+
+#VERSÃO PARA USUARIOS QUANDO O YOUTUBE BLOQUEAR A API
+
 import streamlit as st
-import os, re
+import re
 from difflib import SequenceMatcher
-
-# Versão cloud usa youtube_transcript_api (sem yt-dlp)
-try:
-    from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled, NoTranscriptFound
-    TRANSCRIPT_API_OK = True
-except ImportError:
-    TRANSCRIPT_API_OK = False
-
+from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled, NoTranscriptFound
 
 def processar_legenda_sem_repeticoes(trechos):
+    """Remove repetições e formata o texto das legendas."""
     texto_limpo, ultimo_trecho = [], ""
     for trecho in trechos:
         texto = re.sub(r'\s+', ' ', trecho.strip())
@@ -167,62 +253,37 @@ def processar_legenda_sem_repeticoes(trechos):
         ultimo_trecho = texto
     return "\n\n".join(re.split(r'(?<=[.!?]) +', " ".join(texto_limpo).strip()))[:15000]
 
-
 def extrair_id_video(url):
-    import re
+    """Extrai o ID do vídeo a partir da URL do YouTube."""
     match = re.search(r"(?:v=|youtu\.be/)([\w-]+)", url)
     return match.group(1) if match else None
-
 
 def processar_youtube():
     st.subheader("🎥 Processador de Vídeo YouTube")
     url = st.text_input("Cole a URL do vídeo do YouTube:")
+
     if not url:
         return ""
 
-    ambiente = st.secrets.get("ambiente", "local")
     video_id = extrair_id_video(url)
-
-    if ambiente == "cloud" and TRANSCRIPT_API_OK:
-        try:
-            transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=['pt', 'en'])
-            trechos = [t['text'] for t in transcript]
-            texto = processar_legenda_sem_repeticoes(trechos)
-            return texto
-        except (TranscriptsDisabled, NoTranscriptFound):
-            st.warning("⚠️ Legenda automática não disponível para este vídeo.")
-        except Exception as e:
-            st.error(f"❌ Erro ao buscar legenda com API: {e}")
+    if not video_id:
+        st.warning("⚠️ URL inválida. Por favor, cole um link completo do YouTube.")
         return ""
 
-    else:
-        try:
-            import subprocess, webvtt
+    try:
+        transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=['pt', 'en'])
+        trechos = [t['text'] for t in transcript]
+        return processar_legenda_sem_repeticoes(trechos)
 
-            # Limpa arquivos .vtt
-            for f in os.listdir():
-                if f.endswith(".vtt"):
-                    os.remove(f)
-
-            # Baixa legenda automática
-            subprocess.run(
-                f'yt-dlp --write-auto-sub --sub-lang "pt" --skip-download --output "legenda.%(ext)s" "{url}"',
-                shell=True,
-                check=True
-            )
-
-            vtt_file = next((f for f in os.listdir() if f.endswith(".vtt")), None)
-            if not vtt_file:
-                st.warning("⚠️ Legenda automática não encontrada.")
-                return ""
-
-            trechos = [cap.text.strip() for cap in webvtt.read(vtt_file)]
-            texto = processar_legenda_sem_repeticoes(trechos)
-            os.remove(vtt_file)
-            return texto
-
-        except subprocess.CalledProcessError as e:
-            st.error(f"❌ yt-dlp falhou: {e}")
-        except Exception as e:
-            st.error(f"❌ Erro inesperado: {e}")
+    except TranscriptsDisabled:
+        st.warning("⚠️ Este vídeo não possui legendas automáticas habilitadas.")
         return ""
+    except NoTranscriptFound:
+        st.warning("⚠️ Nenhuma legenda automática disponível para este vídeo.")
+        return ""
+    except Exception as e:
+        st.error(f"❌ Erro ao tentar obter a legenda: {e}")
+        st.info("💡 Pode ser uma limitação temporária do YouTube. Tente outro vídeo.")
+        return ""
+
+
