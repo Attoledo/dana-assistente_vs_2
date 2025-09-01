@@ -115,7 +115,7 @@ if not api_key or not api_key.startswith("gsk_"):
     st.stop()
 
 os.environ["GROQ_API_KEY"] = api_key
-chat = ChatGroq(model="llama3-70b-8192")
+chat = ChatGroq(model="llama-3.3-70b-versatile")
 
 st.set_page_config(page_title="Assistente Dana", page_icon="🦙")
 st.title("Dana, seu Assistente Pessoal 😎")
